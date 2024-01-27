@@ -28,7 +28,7 @@ namespace Flight.AirService.DTOObjects.Models
 
 
         [Required(ErrorMessage = "Required field")]
-        public int TotalPrice { get; set; }
+        public decimal TotalPrice { get; set; }
     }
 }
 

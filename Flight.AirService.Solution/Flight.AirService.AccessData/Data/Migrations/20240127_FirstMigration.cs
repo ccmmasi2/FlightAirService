@@ -31,7 +31,7 @@ namespace Flight.AirService.AccessData.Data.Migrations
                     Date = table.Column<DateTime>(type: "date", nullable: false),
                     Origin = table.Column<string>(type: "nvarchar(3)", maxLength: 3, nullable: false),
                     Destination = table.Column<string>(type: "nvarchar(3)", maxLength: 3, nullable: false),
-                    TotalPrice = table.Column<int>(type: "int", nullable: false)
+                    TotalPrice = table.Column<int>(type: "decimal", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -49,7 +49,7 @@ namespace Flight.AirService.AccessData.Data.Migrations
                     IDJourney = table.Column<int>(type: "int", nullable: false),
                     Origin = table.Column<string>(type: "nvarchar(3)", maxLength: 3, nullable: false),
                     Destination = table.Column<string>(type: "nvarchar(3)", maxLength: 3, nullable: false),
-                    Price = table.Column<int>(type: "int", nullable: false)
+                    Price = table.Column<int>(type: "decimal", nullable: false)
                 },
                 constraints: table =>
                 {

@@ -74,7 +74,7 @@ namespace Flight.AirService.AccessData.Data.Migrations
 
                 b.Property<int>("TotalPrice")
                     .IsRequired()
-                    .HasColumnType("int");
+                    .HasColumnType("decimal");
 
                 b.HasKey("ID");
 
@@ -109,7 +109,7 @@ namespace Flight.AirService.AccessData.Data.Migrations
 
                 b.Property<int>("Price")
                     .IsRequired()
-                    .HasColumnType("int");
+                    .HasColumnType("decimal");
 
                 b.HasKey("ID");
 
