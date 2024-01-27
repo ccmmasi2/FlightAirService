@@ -6,4 +6,15 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Data\SeedData\" />
+    <Folder Include="Data\Migrations\" />
+    <Folder Include="Init\" />
+    <Folder Include="ObjectRepository\Implementation\" />
+    <Folder Include="ObjectRepository\Interface\" />
+    <Folder Include="Configuration\" />
+    <Folder Include="Repository\Implementation\" />
+    <Folder Include="Repository\Interface\" />
+  </ItemGroup>
+
 </Project>
