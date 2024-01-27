@@ -14,7 +14,6 @@ namespace Flight.AirService.DTOObjects.Models
 
 
         [Required(ErrorMessage = "Required field")]
-        [MaxLength(4, ErrorMessage = "The length of the field should be less than 4")]
         public int FlightNumber { get; set; }
     }
 }
