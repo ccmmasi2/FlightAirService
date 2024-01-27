@@ -13,7 +13,7 @@ namespace Flight.AirService.AccessData.Data.Migrations
                     ID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     FlightCarrier = table.Column<string>(type: "nvarchar(4)", maxLength: 4, nullable: false),
-                    FlightNumber = table.Column<int>(type: "int", nullable: false)
+                    FlightNumber = table.Column<int>(type: "nvarchar(4)", nullable: false)
                 },
                 constraints: table =>
                 {

@@ -14,6 +14,6 @@ namespace Flight.AirService.DTOObjects.Models
 
 
         [Required(ErrorMessage = "Required field")]
-        public int FlightNumber { get; set; }
+        public string FlightNumber { get; set; }
     }
 }

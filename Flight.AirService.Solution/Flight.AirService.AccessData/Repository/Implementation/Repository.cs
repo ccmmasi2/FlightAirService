@@ -75,6 +75,27 @@ namespace Flight.AirService.AccessData.Repository.Implementation
             return getId(entity);
         }
 
+        public int InsertIfNotExistSink(T entity, Func<T, int> getId)
+        {
+            var flightCarrier = GetPropertyValue(entity, "FlightCarrier") as string;
+            var flightNumber = GetPropertyValue(entity, "FlightNumber") as string;
+
+            var existingEntity = dbSet
+                .Where(e => GetPropertyValue(e, "FlightCarrier") as string == flightCarrier &&
+                            GetPropertyValue(e, "FlightNumber") as string == flightNumber)
+                .FirstOrDefault();
+
+            if (existingEntity != null)
+            {
+                return getId(existingEntity);
+            }
+
+            dbSet.Add(entity);
+            _dbcontext.SaveChanges();
+
+            return getId(entity);
+        }
+
         public async Task Insert(T entity)
         {
             await dbSet.AddAsync(entity);
@@ -94,6 +115,10 @@ namespace Flight.AirService.AccessData.Repository.Implementation
         public async Task SaveChanges()
         {
             await _dbcontext.SaveChangesAsync();
+        }
+        private object GetPropertyValue(object obj, string propertyName)
+        {
+            return obj.GetType().GetProperty(propertyName)?.GetValue(obj, null);
         }
     }
 }

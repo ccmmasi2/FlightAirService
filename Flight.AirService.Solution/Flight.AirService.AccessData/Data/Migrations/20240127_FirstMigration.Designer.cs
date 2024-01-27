@@ -37,7 +37,7 @@ namespace Flight.AirService.AccessData.Data.Migrations
 
                 b.Property<int>("FlightNumber")
                     .IsRequired()
-                    .HasColumnType("int");
+                    .HasColumnType("nvarchar(4)");
 
                 b.HasKey("ID");
 

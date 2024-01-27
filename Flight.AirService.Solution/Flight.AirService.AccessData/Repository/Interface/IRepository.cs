@@ -20,5 +20,6 @@ namespace Flight.AirService.AccessData.Repository.Interface
         bool Update(T entity);
         Task SaveChanges();
         int InsertSink(T entity, Func<T, int> getId);
+        int InsertIfNotExistSink(T entity, Func<T, int> getId);
     }
 }
