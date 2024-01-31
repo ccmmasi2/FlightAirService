@@ -1,27 +1,40 @@
-# FlightairserviceWeb
+Notas previas:
+Instale nodejs desde la pagina: https://nodejs.org/en/download/current
+	la versión de node instalada es: v18.13.0
+	puede validar la version con el comando: node -v
+Instale Angular: npm install -g @angular/cli desde la ventana de comandos de Visual Studio Code
+	la versión de angular instalada es: 16.2.12
+	puede validar la version con el comando: ng version
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.11.
+/*********************/
 
-## Development server
+1 - descargue el código de el siguiente enlace https://github.com/ccmmasi2/FlightAirService.git
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+2- Cuando lo descargue encontrará dos carpetas iniciales: flightairserviceWeb proyecto en angular Angular CLI: 16.2.12 Node: v18.13.0 
 
-## Code scaffolding
+Flight.AirService.Solution proyecto de visual studio 2022 NET Core 8
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+3 - Dentro de Flight.AirService.Solution ejecute el archivo Flight.AirService.Solution.sln El proyecto fue creado sobre visual studio 2022 NET Core 8
 
-## Build
+Valide la conexión a la bd en el archivo: appsettings.Development.json en Flight.AirService.Api/appsettings.json/appsettings.Development.json
+    el servidor al que se esta conectando es CCMMASI: "Server=CCMMASI", cambie al nombre del servidor que necesite. La autentiación esta por windows
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+4 - Ejecute la aplicación
 
-## Running unit tests
+5 - La aplicación creará la base de datos automaticamente
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+6 - La ejecutar la aplicación de visual studio se espera que tenga SqlServer Instalado y en lo posible el Management Studio
 
-## Running end-to-end tests
+7 - Esta predeterminado para crear la bd en "(el nombre que usted indice del servidor)" de SqlServer
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+8 - Si tiene una configuración diferente de Sql por favor valide la cadena de conexión en la api en el archivo appsettings.Development.json y busque AirServiceConectionDB
 
-## Further help
+9 - Despliegue la aplicación sobre Visual Studio 2022, si todo se genera correctamente debería ver el swagger y la base de datos creada 
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+10 - Abra el proyecto flightairserviceWeb de angular abriendo ventana de comandos sobre la ruta y pulsando "code ."
+
+11 - Una vez abierto abra una ventana de comandos
+
+12 - Instale los node_modules con "npm install"
+
+13 - Ejecute la aplicación con "ng serve -o" 
